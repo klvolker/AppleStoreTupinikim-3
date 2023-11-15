@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AppleStoreTupinikim.Models.Vendedores>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>VENDEDORES</h1>
+
+<p>
+    <a asp-action="Create">Adicionar vendedores</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.razaoSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.site)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.razaoSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.site)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.cnpj">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.cnpj">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.cnpj">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

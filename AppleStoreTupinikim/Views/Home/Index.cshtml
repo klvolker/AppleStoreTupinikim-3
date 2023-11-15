@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo à AppleStoreTupinikim!</h1>
+    <p>Cansados de sofrer com os preços abusivos dos celulares da Apple no Brasil? Preços baixos são aqui na AppleStoreTupinikim!</p>
+
+    <!--Não consegui fazer os botões funcionarem para redirecionar-->
+    <button role="button" asp-controller="Produtos" asp-action="Index" class="btn btn-primary">Nossos produtos</button>
+    <button role="button"  asp-controller="Vendedores" asp-action="Index" class="btn btn-primary">Nossos vendedores</button>
+    <button role="button" asp-controller="Clientes" asp-action="Index" class="btn btn-primary">Nossos clientes</button>
+</div>
